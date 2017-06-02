@@ -182,8 +182,8 @@ img{
 	.body h2 { font-size: 20px; } 
 	.body{
 		min-height: 100vh;
-		.section{
-			margin-bottom: 120px;
-		}
+	}
+	.body .section{
+		margin-bottom: 120px;
 	}
 }
