@@ -127,7 +127,7 @@ textarea { overflow: auto; }
 /** 1. Correct the inability to style clickable types in iOS and Safari. 2. Change font properties to `inherit` in Safari. */
 ::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
 
-.body, header { max-width: 800px; margin: 0 auto; padding: 0 15px; }
+.body, header { margin: 0 auto; padding: 0; }
 
 h1, h2, h3, p { color: #000; }
 
@@ -142,7 +142,7 @@ header h2 { font-size: 16px; }
 @media screen and (min-width: 600px) { header h1 { font-size: 50px; line-height: 66px; }
   header h2 { font-size: 20px; } }
 
-.body .section { margin: 50px 0; }
+.body .section { margin: 0; max-width: 1000px; padding: 0 15px; }
 
 .body h1, .body h2, .body h3 { font-family: sans-serif; margin-bottom: 0; }
 
@@ -160,16 +160,30 @@ header h2 { font-size: 16px; }
 
 .body{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-}
-
-@media screen and (min-width: 600px) { .body h2 { font-size: 20px; } }
-body{
 	background: url(../img/bg.jpg);
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
-	min-height: 100vh;
-	display: flex;
+	min-height: 70vh;
+}
+
+
+img{
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+	display: block;
+}
+
+@media screen and (min-width: 600px) { 
+	.body h2 { font-size: 20px; } 
+	.body{
+		min-height: 100vh;
+		.section{
+			margin-bottom: 120px;
+		}
+	}
 }
